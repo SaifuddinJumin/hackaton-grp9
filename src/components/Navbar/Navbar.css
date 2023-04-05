@@ -1,0 +1,37 @@
+@media screen and (min-width: 992px) {
+
+    .navbar,
+    .navbar-expand-lg .navbar-collapse,
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar {
+        width: 20%;
+        height: 100vh;
+        align-items: flex-start;
+        float: left;
+    }
+
+    .navbar-brand {
+        margin-left: 5px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .navbar {
+        width: 100%;
+    }
+}
+
+.navbar {
+    font-size: larger;
+    font-weight: bold;
+    position: fixed;
+}
+
+.navbar-brand {
+    font-size: xx-large;
+    font-weight: bold;
+}
