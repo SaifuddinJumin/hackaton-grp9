@@ -1,6 +1,6 @@
 @media screen and (min-width: 992px) {
     .wrapper {
-        /* float: left; */
+        float: left;
         margin-left: 20%;
         width: 80%;
     }
@@ -10,10 +10,4 @@
     .wrapper {
         padding-top: 66px;
     }
-}
-
-
-
-.row {
-    clear: both;
 }

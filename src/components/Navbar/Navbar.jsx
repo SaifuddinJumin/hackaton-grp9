@@ -1,7 +1,25 @@
+import axios from "axios";
 import Chat from "../Chat";
 import "./Navbar.css";
+import React, { useState, useEffect } from 'react';
+import Endpoints from "../../api/Endpoints";
+import NavbarProjectNumber from "../NavbarProjectNumber";
+
 
 const Navbar = () => {
+    const [projectNumber, setProjectNumber] = useState([]);
+
+    const fetchData = () => {
+        axios
+            .get(Endpoints.CATEGORY_URL)
+            .then(response => setProjectNumber(response.data.data))
+            .catch(error => console.log(error))
+    }
+
+    useEffect(() => {
+        fetchData()
+    }, [])
+   
     return (
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -29,11 +47,11 @@ const Navbar = () => {
                             Projects
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Projects Page</a>
+                            <a class="dropdown-item" href="#">Projects List</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Project 1</a>
-                            <a class="dropdown-item" href="#">Project 2</a>
-                            <a class="dropdown-item" href="#">Project 3</a>
+                            {
+                                projectNumber.map((proNum) => <NavbarProjectNumber data={proNum} key={proNum.catId}/>)
+                            }
                         </div>
                     </li>
 

@@ -24,11 +24,9 @@ const JobList = () => {
                 <h1>Project 1 - JobList</h1>
 
                 <div className="row">
-                    <div className="col-xs-10 col-md-4">
-                        {
-                            subCategories.map((task) => <JobCard data={task} key={task.subId} />)
-                        }
-                    </div>
+                    {
+                        subCategories.map((task) => <JobCard data={task} key={task.subId} />)
+                    }
                 </div>
             </div >
         </div>
