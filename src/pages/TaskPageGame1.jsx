@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar/Navbar";
 import TaskDetail from "../components/TaskDetail/TaskDetail";
 import Comment from "../components/Comment";
 import TaskDetailModal from "../components/TaskDetail/TaskDetailModal";
+import ChatInput from "../components/ChatInput/ChatInput";
 
 const TaskPageGame1 = () => {
 
@@ -27,6 +28,7 @@ const TaskPageGame1 = () => {
 
                 <Comment />
             </div>
+            <ChatInput />
         </>
     )
 }

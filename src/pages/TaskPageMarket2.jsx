@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar/Navbar";
 import TaskDetail from "../components/TaskDetail/TaskDetail";
 import Comment from "../components/Comment";
 import TaskDetailModal from "../components/TaskDetail/TaskDetailModal";
+import ChatInput from "../components/ChatInput/ChatInput";
 
 const TaskPageMarket2 = () => {
 
@@ -27,6 +28,7 @@ const TaskPageMarket2 = () => {
 
                 <Comment />
             </div>
+            <ChatInput />
         </>
     )
 }

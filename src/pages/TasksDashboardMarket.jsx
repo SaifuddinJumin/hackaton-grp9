@@ -3,7 +3,28 @@ import Navbar from "../components/Navbar/Navbar";
 import { Link } from "react-router-dom";
 import TaskDashboardModal from "../components/TaskDashboardModal";
 
+
+import { useState, useEffect } from "react";
+import TaskDetail from "../components/TaskDetails";
+import ChatInput from "../components/ChatInput/ChatInput";
+
 const TasksDashboardMarket = () => {
+
+    const [taskDetails, setTaskDetails] = useState([])
+    const [taskDetail, setTaskDetail] = useState({
+        taskName: '',
+        taskDescription: '',
+        taskStatus: '',
+        taskPath: ''
+    });
+
+    const updateTasks = () =>{
+        taskDetails.push(taskDetail)
+        
+        const newTaskDetail = {...taskDetail, taskName: '', taskDescription: '', taskStatus: '', taskPath:''}
+        setTaskDetail(newTaskDetail)
+    }
+
     return (
         <>
             <Navbar />
@@ -31,14 +52,21 @@ const TasksDashboardMarket = () => {
                             </div>
                         </div>
 
+                        {
+                            taskDetails.map((data, index) =>
+                                <TaskDetail data={data} key={index}/>
+                            )
+                        }
+
                         <div className="col-md-2 m-3">
                             <button type="button" class="btn btn-light border" data-toggle="modal" data-target="#exampleModal">Add</button>
-                            <TaskDashboardModal />
+                            <TaskDashboardModal taskDetail={taskDetail} setTaskDetail={setTaskDetail} onSubmit={updateTasks} />
                         </div>
 
                     </div>
                 </div >
             </div>
+            <ChatInput />
         </>
     )
 }

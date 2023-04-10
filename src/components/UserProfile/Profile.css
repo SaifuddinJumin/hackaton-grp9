@@ -1,0 +1,8 @@
+.img-thumbnail{
+    max-width: 150px;
+    height: auto;
+}
+
+#userInfo{
+    width: 50%;
+}

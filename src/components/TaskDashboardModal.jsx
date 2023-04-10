@@ -3,26 +3,28 @@ import React, { useState } from 'react';
 // import Endpoints from '../../api/Endpoints';
 import Endpoints from '../api/Endpoints';
 
-const TaskDashboardModal = () => {
-    const [taskDetail, setTaskDetail] = useState({
-        taskName: "",
-        description: "",
-        content: ""
-    })
+const TaskDashboardModal = (props) => {
+
+    const {taskDetail, setTaskDetail, onSubmit} = props
+    
+
 
     const onChangeHandler = (event) => {
-        setTaskDetail({
-            ...taskDetail,
-            [event.target.name]: event.target.value
-        })
+        const {name, value} = event.target;
+        setTaskDetail({...taskDetail, [name]: value})
     }
 
     const onSubmitHandler = (event) => {
         event.preventDefault()
-        axios
-            .put(Endpoints.TASK_EDIT_PUT)
-            .then(response => console.log(response))
-            .catch(error => console.log(error))
+        if(taskDetail.taskName !== '')
+        {   
+        onSubmit();
+        }
+
+        // axios
+        //     .put(Endpoints.TASK_EDIT_PUT)
+        //     .then(response => console.log(response))
+        //     .catch(error => console.log(error))
     }
 
     return (
@@ -45,7 +47,6 @@ const TaskDashboardModal = () => {
                                     className="form-control"
                                     name="taskName"
                                     onChange={onChangeHandler}
-                                    value={taskDetail.taskName}
                                 />
                             </div>
                             <div className="form-group">
@@ -53,19 +54,8 @@ const TaskDashboardModal = () => {
                                 <input
                                     type="text"
                                     className="form-control"
-                                    name="description"
+                                    name="taskDescription"
                                     onChange={onChangeHandler}
-                                    value={taskDetail.description}
-                                />
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="">Content</label>
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    name="content"
-                                    onChange={onChangeHandler}
-                                    value={taskDetail.content}
                                 />
                             </div>
                             <button type="submit" class="btn btn-primary">Create new</button>

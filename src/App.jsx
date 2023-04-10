@@ -13,6 +13,7 @@ import TaskPageGame2 from "./pages/TaskPageGame2";
 import TaskPageGame3 from "./pages/TaskPageGame3";
 import TaskPageMarket1 from "./pages/TaskPageMarket1";
 import TaskPageMarket2 from "./pages/TaskPageMarket2";
+import UserProfile from "./pages/UserProfilePage";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<ProjectsPage/>}/>
+
+          <Route path="/userprofile" element={<UserProfile/>}/>
 
           <Route path="/taskdashboard1" element={<TasksDashboardWeb/>}/>
           <Route path="/taskdashboard2" element={<TasksDashboardGame/>}/>

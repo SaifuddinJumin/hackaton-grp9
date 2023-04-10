@@ -39,7 +39,7 @@ const Navbar = () => {
                             Profile
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">My Profile</a>
+                            <Link class="dropdown-item" to="/userprofile">My Profile</Link>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item text-light bg-danger" href="#">Logout</a>
                         </div>
@@ -58,14 +58,14 @@ const Navbar = () => {
                         </div>
                     </li>
 
-                    <li class="nav-item dropdown">
+                    {/* <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                             Chat
                         </a>
                         <div class="dropdown-menu">
                             <Chat />
                         </div>
-                    </li>
+                    </li> */}
 
                     {/* <li class="nav-item ">
                         <a class="nav-link" href="#">Chat <span class="sr-only">(current)</span></a>
