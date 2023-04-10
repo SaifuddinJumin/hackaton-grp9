@@ -3,11 +3,12 @@ import Navbar from "../components/Navbar/Navbar";
 import { Link } from "react-router-dom";
 import TaskDashboardModal from "../components/TaskDashboardModal";
 
-import { useState, useEffect } from "react";
+import { useState, useRef } from "react";
 import TaskDetail from "../components/TaskDetails";
 import ChatInput from "../components/ChatInput/ChatInput";
 
 const TasksDashboardGame = () => {
+    const modalRef = useRef(null)
     const [taskDetails, setTaskDetails] = useState([])
     const [taskDetail, setTaskDetail] = useState({
         taskName: '',
@@ -19,7 +20,7 @@ const TasksDashboardGame = () => {
     const updateTasks = () =>{
         taskDetails.push(taskDetail)
         
-        const newTaskDetail = {...taskDetail, taskName: '', taskDescription: '', taskStatus: '', taskPath:''}
+        const newTaskDetail = {...taskDetail}
         setTaskDetail(newTaskDetail)
     }
     return (
@@ -66,7 +67,7 @@ const TasksDashboardGame = () => {
 
                         <div className="col-md-2 m-3">
                             <button type="button" class="btn btn-light border" data-toggle="modal" data-target="#exampleModal">Add</button>
-                            <TaskDashboardModal taskDetail={taskDetail} setTaskDetail={setTaskDetail} onSubmit={updateTasks} />
+                            <TaskDashboardModal taskDetail={taskDetail} setTaskDetail={setTaskDetail} onSubmit={updateTasks} modalRef={modalRef}/>
                         </div>
 
                     </div>

@@ -3,34 +3,35 @@ import React, { useState } from 'react';
 // import Endpoints from '../../api/Endpoints';
 import Endpoints from '../../api/Endpoints';
 
-const ProjectsPageModal = () => {
-    const [taskDetail, setTaskDetail] = useState({
-        taskName: "",
-        description: "",
-        content: ""
-    })
+const ProjectsPageModal = (props) => {
 
+    const {projectDetail, setProjectDetail, onSubmit, modalRef} = props
+    
     const onChangeHandler = (event) => {
-        setTaskDetail({
-            ...taskDetail,
-            [event.target.name]: event.target.value
-        })
+        const {name, value} = event.target;
+        setProjectDetail({...projectDetail, [name]: value})
     }
 
     const onSubmitHandler = (event) => {
         event.preventDefault()
-        axios
-            .put(Endpoints.TASK_EDIT_PUT)
-            .then(response => console.log(response))
-            .catch(error => console.log(error))
+
+        if(projectDetail.projectName !== '')
+        {   
+        onSubmit();
+        modalRef.current.click();
+        }
+        // axios
+        //     .put(Endpoints.TASK_EDIT_PUT)
+        //     .then(response => console.log(response))
+        //     .catch(error => console.log(error))
     }
 
     return (
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" ref={modalRef}>
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Create new team</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Create new project</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -39,13 +40,12 @@ const ProjectsPageModal = () => {
                     <div class="modal-body">
                         <form onSubmit={onSubmitHandler}>
                             <div className="form-group">
-                                <label htmlFor="">Team name</label>
+                                <label htmlFor="">Project name</label>
                                 <input
                                     type="text"
                                     className="form-control"
-                                    name="taskName"
+                                    name="projectName"
                                     onChange={onChangeHandler}
-                                    value={taskDetail.taskName}
                                 />
                             </div>
                             <div className="form-group">
@@ -53,9 +53,8 @@ const ProjectsPageModal = () => {
                                 <input
                                     type="text"
                                     className="form-control"
-                                    name="description"
+                                    name="projectDescription"
                                     onChange={onChangeHandler}
-                                    value={taskDetail.description}
                                 />
                             </div>
                             <div className="form-group">
@@ -63,9 +62,8 @@ const ProjectsPageModal = () => {
                                 <input
                                     type="text"
                                     className="form-control"
-                                    name="content"
+                                    name="projectRole"
                                     onChange={onChangeHandler}
-                                    value={taskDetail.content}
                                 />
                             </div>
                             <button type="submit" class="btn btn-primary">Create new</button>

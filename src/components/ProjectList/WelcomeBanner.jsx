@@ -8,7 +8,7 @@ import "./ProjectList.css";
 const WelcomeBanner = () => {
 
     return (
-        <div className='wrapper container mt-2 px-5'>
+        <div className='wrapper container mt-2 px-5 py-0 my-0'>
             <h1 style={{fontWeight: 'bolder'}}>Welcome Iqbal</h1>
 
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

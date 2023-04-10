@@ -3,7 +3,24 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import ProjectsPageModal from "./ProjectsPageModal";
 
+import { useState, useRef } from "react";
+import ProjectDetail from "./ProjectDetails";
+
 const ProjectList = () => {
+    const modalRef = useRef(null)
+    const [projectDetails, setProjectDetails] = useState([])
+    const [projectDetail, setProjectDetail] = useState({
+        projectName: '',
+        projectDescription: '',
+        projectRole:''
+    });
+
+    const updateProjects = () =>{
+        projectDetails.push(projectDetail)
+        
+        const newProjectDetail = {...projectDetail}
+        setProjectDetail(newProjectDetail)
+    }
 
     return (
         <div className="wrapper">
@@ -42,9 +59,15 @@ const ProjectList = () => {
                         </div>
                     </div>
 
+                    {
+                        projectDetails.map((data, index) =>
+                        <ProjectDetail data={data} key={index}/>
+                        )
+                    }
+
                     <div className="col-md-2 m-5 p-4">
-                        <button type="button" class="btn btn-light border btn-plus" data-toggle="modal" data-target="#exampleModal">+</button>
-                        <ProjectsPageModal />
+                        <button type="button" class="btn btn-light border" data-toggle="modal" data-target="#exampleModal" >+</button>
+                        <ProjectsPageModal projectDetail={projectDetail} setProjectDetail={setProjectDetail} onSubmit={updateProjects} modalRef={modalRef}/>
                     </div>
 
                 </div>

@@ -5,10 +5,8 @@ import Endpoints from '../api/Endpoints';
 
 const TaskDashboardModal = (props) => {
 
-    const {taskDetail, setTaskDetail, onSubmit} = props
+    const {taskDetail, setTaskDetail, onSubmit, modalRef} = props
     
-
-
     const onChangeHandler = (event) => {
         const {name, value} = event.target;
         setTaskDetail({...taskDetail, [name]: value})
@@ -16,9 +14,11 @@ const TaskDashboardModal = (props) => {
 
     const onSubmitHandler = (event) => {
         event.preventDefault()
+
         if(taskDetail.taskName !== '')
         {   
         onSubmit();
+        modalRef.current.click();
         }
 
         // axios
@@ -28,7 +28,7 @@ const TaskDashboardModal = (props) => {
     }
 
     return (
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" ref={modalRef}>
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
