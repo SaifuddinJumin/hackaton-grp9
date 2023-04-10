@@ -20,18 +20,27 @@ const Profile = () => {
             <hr />
 
             <p class='h2 ml-3'>Information</p>
-            <div className="container d-flex">
-                
-                <div id='userInfo' class='border rounded bg-light p-2 m-1'>
-                <p class='h5'>Email Address</p>
-                <p class='pl-3'> iqbal@email.com</p>
+            <div className="container container-fluid">
+
+                <div className="row">
+                    <div className="col-md-6 d-flex flex-column">
+                        <div id='userInfo' class='card border rounded bg-light p-2 m-1'>
+                            <div className="card-body">
+                                <p class='h5 card-title'>Email Address</p>
+                                <p class='pl-3 card-text'> iqbal@email.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-6 d-flex flex-column">
+                        <div id='userInfo' class='card border rounded bg-light p-2 m-1'>
+                            <div className="card-body">
+                                <p class='h5'>Github</p>
+                                <p class='pl-3'> https://githubb.com/Iqbalthegreat</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-                <div id='userInfo' class='border rounded bg-light p-2 m-1'>
-                <p class='h5'>Github</p>
-                <p class='pl-3'> https://githubb.com/Iqbal</p>
-                </div>
-                
+
             </div>
         </div>
     )
