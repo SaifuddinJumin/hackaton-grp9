@@ -1,6 +1,9 @@
 import React from 'react';
-import banner1 from "../images/14-days-left-to-ramadan.jpeg";
-import banner2 from "../images/Nuzul-Al-Quran-1.jpg";
+import bannerNuzul from "../images/Nuzul-Al-Quran-1.jpg";
+import bannerRamadan14 from "../images/14-days-left-to-ramadan.jpeg";
+import bannerRamadan10 from "../images/10-days-left-to-ramadan.png";
+import bannerRamadan9 from "../images/9-days-left-to-ramadan.png";
+import "./ProjectList.css";
 
 const WelcomeBanner = () => {
 
@@ -15,11 +18,19 @@ const WelcomeBanner = () => {
                 </ol>
 
                 <div class="carousel-inner">
+
+                    {/* <div class="carousel-item active">
+                        <img src={bannerRamadan14} class="d-block w-100 banner" alt="14 days of Ramadan left" />
+                    </div> */}
                     <div class="carousel-item active">
-                        <img src={banner1} class="d-block w-100" alt="14 days of Ramadan left" />
+                        <img src={bannerRamadan10} class="d-block w-100 banner" alt="14 days of Ramadan left" />
                     </div>
+                    {/* <div class="carousel-item active">
+                        <img src={bannerRamadan9} class="d-block w-100 banner" alt="14 days of Ramadan left" />
+                    </div> */}
+                    
                     <div class="carousel-item">
-                        <img src={banner2} class="d-block w-100" alt="Nuzul in-coming" />
+                        <img src={bannerNuzul} class="d-block w-100 banner" alt="Nuzul in-coming" />
                     </div>
                 </div>
 

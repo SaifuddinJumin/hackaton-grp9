@@ -10,7 +10,7 @@ const TasksDashboard = () => {
             <Navbar />
             <div className="wrapper" >
                 <div className="container">
-                    <h1>IT crowd - Tasks List</h1>
+                    <h1>Web Development - Tasks List</h1>
 
                     <div className="row">
                         <div className="col-md-12" >

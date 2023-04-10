@@ -26,7 +26,7 @@ const TaskDetail = () => {
     }, [])
 
     return (
-        <div className="wrapper">
+        <div className="wrapper container">
             <div className="row ml-3">
                 <div className="col-md-12">
                     <p class="h1 mt-4 mb-4">Create CRUD function for inventory</p>

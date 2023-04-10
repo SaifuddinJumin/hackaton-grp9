@@ -11,3 +11,13 @@
         padding-top: 66px;
     }
 }
+
+.banner {
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(20%);
+}

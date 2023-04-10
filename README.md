@@ -1,4 +1,4 @@
-A demo for hackaton pitch 07/04/2023 (no back-end)
+Attempt to connect front-end to back-end
 
 # Getting Started with Create React App
 

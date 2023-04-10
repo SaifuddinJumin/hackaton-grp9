@@ -52,9 +52,9 @@ const Navbar = () => {
                         <div class="dropdown-menu">
                             <Link class="dropdown-item" to="/">All Projects</Link>
                             <div class="dropdown-divider"></div>
-                            <Link class="dropdown-item" to="/taskdashboard1">💻 IT crowd</Link>
-                            <Link class="dropdown-item" to="/taskdashboard2">🎁 Marketing department</Link>
-                            <Link class="dropdown-item" to="/taskdashboard3">💹 Finance department</Link>
+                            <Link class="dropdown-item" to="/taskdashboard1">💻 Web Development</Link>
+                            <Link class="dropdown-item" to="/taskdashboard2">👾 Game Design</Link>
+                            <Link class="dropdown-item" to="/taskdashboard3">💹 Marketing Services & Product</Link>
                         </div>
                     </li>
 

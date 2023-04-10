@@ -14,9 +14,9 @@ const ProjectList = () => {
                     <div className="col-md-6">
                         <div className="card bg-light mt-2">
                             <div className="card-body">
-                                <h5 className="card-title">IT crowd</h5>
-                                <p className="card-text">Web development</p>
-                                <p className="card-text">Role: Coders</p>
+                                <h5 className="card-title">Web Development</h5>
+                                <p className="card-text">Web application for warehouse inventory.</p>
+                                <p className="card-text">Role: IT Crowd</p>
                                 <Link to="/taskdashboard1" className="btn btn-primary">Go to tasks</Link>
                             </div>
                         </div>
@@ -24,8 +24,8 @@ const ProjectList = () => {
                     <div className="col-md-6">
                         <div className="card bg-light mt-2">
                             <div className="card-body">
-                                <h5 className="card-title">Marketing Department</h5>
-                                <p className="card-text">Short description of task</p>
+                                <h5 className="card-title">Game Design</h5>
+                                <p className="card-text">Sharing idea among developer team</p>
                                 <p className="card-text">Role: Fun people</p>
                                 <Link to="/taskdashboard2" className="btn btn-primary">Go to tasks</Link>
                             </div>
@@ -34,9 +34,9 @@ const ProjectList = () => {
                     <div className="col-md-6">
                         <div className="card bg-light mt-2">
                             <div className="card-body">
-                                <h5 className="card-title">Finance department</h5>
-                                <p className="card-text">Short description of task</p>
-                                <p className="card-text">Role: bling-bling</p>
+                                <h5 className="card-title">Marketing Services & Product</h5>
+                                <p className="card-text">Make posters & video advertise on social media</p>
+                                <p className="card-text">Role: Sales</p>
                                 <Link to="/taskdashboard3" className="btn btn-primary">Go to tasks</Link>
                             </div>
                         </div>
