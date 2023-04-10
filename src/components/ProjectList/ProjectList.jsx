@@ -43,7 +43,7 @@ const ProjectList = () => {
                     </div>
 
                     <div className="col-md-2 m-5 p-4">
-                        <button type="button" class="btn btn-light border" data-toggle="modal" data-target="#exampleModal">+</button>
+                        <button type="button" class="btn btn-light border btn-plus" data-toggle="modal" data-target="#exampleModal">+</button>
                         <ProjectsPageModal />
                     </div>
 

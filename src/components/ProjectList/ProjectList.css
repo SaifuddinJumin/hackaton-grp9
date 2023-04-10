@@ -21,3 +21,7 @@
 .carousel-control-next-icon {
     filter: invert(20%);
 }
+
+.btn-plus {
+    font-size: x-large;
+}

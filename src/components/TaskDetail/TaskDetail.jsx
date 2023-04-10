@@ -29,6 +29,7 @@ const TaskDetail = () => {
         <div className="wrapper container">
             <div className="row ml-3">
                 <div className="col-md-12">
+                    <p className="h4">Web Development</p>
                     <p class="h1 mt-4 mb-4">Create CRUD function for inventory</p>
                     <p class="h5">Description</p>
                     <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium sapiente dolores quos ad fugiat, obcaecati quae? Obcaecati sequi quis corrupti ipsa voluptas voluptatibus. Velit omnis suscipit, pariatur quos possimus magni!</p>

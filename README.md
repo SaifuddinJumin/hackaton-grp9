@@ -1,4 +1,10 @@
-Attempt to connect front-end to back-end
+Completing the demo before attempting to connect front-end to back-end
+
+Remember !
+1. For directory front-end ie. axios
+>npm install
+2. For directory server ie. express & mysql2
+>npm install
 
 # Getting Started with Create React App
 
