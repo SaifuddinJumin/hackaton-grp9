@@ -1,3 +1,5 @@
+A demo for hackaton pitch 07/04/2023 (no back-end)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

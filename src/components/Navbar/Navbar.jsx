@@ -3,27 +3,30 @@ import Chat from "../Chat";
 import "./Navbar.css";
 import React, { useState, useEffect } from 'react';
 import Endpoints from "../../api/Endpoints";
-import NavbarProjectNumber from "../NavbarProjectNumber";
-
+import { Link } from "react-router-dom";
+import ChuChul from "./ChuChul";
 
 const Navbar = () => {
-    const [projectNumber, setProjectNumber] = useState([]);
+    // const [projectNumber, setProjectNumber] = useState([]);
+    const hexColour = ChuChul();
 
-    const fetchData = () => {
-        axios
-            .get(Endpoints.CATEGORY_URL)
-            .then(response => setProjectNumber(response.data.data))
-            .catch(error => console.log(error))
-    }
+    // const fetchData = () => {
+    //     axios
+    //         .get(Endpoints.CATEGORY_URL)
+    //         .then(response => setProjectNumber(response.data.data))
+    //         .catch(error => console.log(error))
+    // }
 
-    useEffect(() => {
-        fetchData()
-    }, [])
-   
+    // useEffect(() => {
+    //     fetchData()
+    // }, [])
+
+    console.log(hexColour);
+
     return (
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">ProCrass</a>
+        <nav class="navbar navbar-expand-lg navbar-dark" style={{zIndex: 10, backgroundColor: hexColour}}>
+            <Link class="navbar-brand" to="/">ProCrass</Link>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -47,11 +50,11 @@ const Navbar = () => {
                             Projects
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Projects List</a>
+                            <Link class="dropdown-item" to="/">All Projects</Link>
                             <div class="dropdown-divider"></div>
-                            {
-                                projectNumber.map((proNum) => <NavbarProjectNumber data={proNum} key={proNum.catId}/>)
-                            }
+                            <Link class="dropdown-item" to="/taskdashboard1">💻 IT crowd</Link>
+                            <Link class="dropdown-item" to="/taskdashboard2">🎁 Marketing department</Link>
+                            <Link class="dropdown-item" to="/taskdashboard3">💹 Finance department</Link>
                         </div>
                     </li>
 

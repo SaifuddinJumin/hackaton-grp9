@@ -1,40 +1,52 @@
 import axios from "axios";
 import { useState } from "react";
 import Endpoints from "../api/Endpoints";
+import Commenter from "./CommentList";
 
 const Comment = () => {
-    const [comment, setComment] = useState("");
 
-    const onSubmitHandler = (event) => {
-        event.preventDefault();
-        axios
-            .post(Endpoints.COMMENT_POST, comment)
-            .then(response => console.log(response))
-            .catch(error => console.log(error))
+
+    // for comment
+    const [state, setState] = useState([])
+    const [text, setTexts] = useState([])
+
+    const onChangeValue = (e) => {
+        setState(e.target.value)
+    }
+    const submit = (e) => {
+        e.preventDefault();
+        setTexts(prev => [...prev, { id: state.length, content: state }])
     }
 
-    const onChangeHandler = (event) => {
-        setComment({
-            ...comment, [event.target.comment]: event.target.value
-        })
-    }
 
     return (
-        <div>
-            <form onSubmit={onSubmitHandler}>
+        <div class="container mt-5">
+            <form onSubmit={submit} >
                 <div className="form-group container">
-                    <input
-                        type="text"
-                        name="comment"
-                        className="form-control border mt-2"
-                        onChange={onChangeHandler}
-                        placeholder="Write comment"
-                    />
-                    <button
-                        type="submit"
-                        className="btn btn-primary mt-2">
-                        Post Comment
-                    </button>
+                    <p class="h4">Comment:</p>
+                    {
+                        console.log(`array ${text}`)
+                    }
+
+                    {
+                        text.map((data) => <Commenter data={data} />)
+                    }
+
+                    
+                        <input
+                            type="text"
+                            name="comment"
+                            className="form-control border mt-2"
+                            onChange={onChangeValue}
+                            placeholder="Write comment"
+                        />
+                        <button
+                            type="submit"
+                            className="btn btn-primary mt-2">
+                            Post Comment
+                        </button>
+                    
+
                 </div>
             </form>
         </div>

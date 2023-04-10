@@ -1,8 +1,9 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import Endpoints from '../../api/Endpoints';
+// import Endpoints from '../../api/Endpoints';
+import Endpoints from '../api/Endpoints';
 
-const TaskDetailModal = () => {
+const TaskDashboardModal = () => {
     const [taskDetail, setTaskDetail] = useState({
         taskName: "",
         description: "",
@@ -29,7 +30,7 @@ const TaskDetailModal = () => {
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Edit Task</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Create new task</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -67,7 +68,7 @@ const TaskDetailModal = () => {
                                     value={taskDetail.content}
                                 />
                             </div>
-                            <button type="submit" class="btn btn-primary">Save changes</button>
+                            <button type="submit" class="btn btn-primary">Create new</button>
                         </form>
                     </div>
 
@@ -80,4 +81,4 @@ const TaskDetailModal = () => {
 
     )
 }
-export default TaskDetailModal;
+export default TaskDashboardModal;

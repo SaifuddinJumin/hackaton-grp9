@@ -1,27 +1,12 @@
-import axios from 'axios';
-import React, { useState, useEffect } from 'react';
-import Endpoints from '../../api/Endpoints';
+import React from 'react';
 import banner1 from "../images/14-days-left-to-ramadan.jpeg";
 import banner2 from "../images/Nuzul-Al-Quran-1.jpg";
 
 const WelcomeBanner = () => {
-    const [ firstName, setFirstName ] = useState([]);
-    const id = "62a2eb3cc6a9e4001785f1ef";
-
-    const fetchData = () => {
-        axios
-            .get(Endpoints.USERS_BY_ID + id)
-            .then(response => setFirstName(response.data.data))
-            .catch(error => console.log(error))
-    }
-
-    useEffect(() => {
-        fetchData()
-    }, [id])
 
     return (
         <div className='wrapper container mt-2 px-5'>
-            <h1>Welcome {firstName.firstName}</h1>
+            <h1 style={{fontWeight: 'bolder'}}>Welcome Iqbal</h1>
 
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">

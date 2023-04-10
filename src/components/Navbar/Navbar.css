@@ -12,6 +12,7 @@
         height: 100vh;
         align-items: flex-start;
         float: left;
+        z-index: 5;
     }
 
     .navbar-brand {

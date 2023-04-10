@@ -1,32 +1,51 @@
-import JobCard from "../JobCard";
 import "./JobList.css";
 import React, { useState, useEffect } from 'react';
-import axios from "axios";
-import Endpoints from "../../api/Endpoints";
 
 const JobList = () => {
-    const [subCategories, setSubCategories] = useState([]);
-
-    const fetchData = () => {
-        axios
-            .get(Endpoints.SUB_CATEGORY_URL)
-            .then(response => setSubCategories(response.data.data))
-            .catch(error => console.log(error))
-    }
-
-    useEffect(() => {
-        fetchData()
-    }, [])
 
     return (
         <div className="wrapper">
             <div className="container">
-                <h1>Project 1 - JobList</h1>
+                <h1>IT crowd - Tasks List</h1>
 
                 <div className="row">
-                    {
-                        subCategories.map((task) => <JobCard data={task} key={task.subId} />)
-                    }
+                    <div className="col-md-12">
+                        <div className="card bg-light mt-2">
+                            <div className="card-body">
+                                <h5 className="card-title">Task 1</h5>
+                                <p className="card-text">Short description of task</p>
+                                <a href="#" className="btn btn-primary">see more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-12">
+                        <div className="card bg-light mt-2">
+                            <div className="card-body">
+                                <h5 className="card-title">Task 1</h5>
+                                <p className="card-text">Short description of task</p>
+                                <a href="#" className="btn btn-primary">see more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-12">
+                        <div className="card bg-light mt-2">
+                            <div className="card-body">
+                                <h5 className="card-title">Task 1</h5>
+                                <p className="card-text">Short description of task</p>
+                                <a href="#" className="btn btn-primary">see more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-12">
+                        <div className="card bg-light mt-2">
+                            <div className="card-body">
+                                <h5 className="card-title">Task 1</h5>
+                                <p className="card-text">Short description of task</p>
+                                <a href="#" className="btn btn-primary">see more</a>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div >
         </div>
