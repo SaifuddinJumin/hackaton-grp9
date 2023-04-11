@@ -12,13 +12,13 @@ const ProjectList = () => {
     const [projectDetail, setProjectDetail] = useState({
         projectName: '',
         projectDescription: '',
-        projectRole:''
+        projectRole: ''
     });
 
-    const updateProjects = () =>{
+    const updateProjects = () => {
         projectDetails.push(projectDetail)
-        
-        const newProjectDetail = {...projectDetail}
+
+        const newProjectDetail = { ...projectDetail }
         setProjectDetail(newProjectDetail)
     }
 
@@ -61,14 +61,15 @@ const ProjectList = () => {
 
                     {
                         projectDetails.map((data, index) =>
-                        <ProjectDetail data={data} key={index}/>
+                            <ProjectDetail data={data} key={index} />
                         )
                     }
 
-                    <div className="col-md-2 m-5 p-4">
-                        <button type="button" class="btn btn-light border" data-toggle="modal" data-target="#exampleModal" >+</button>
-                        <ProjectsPageModal projectDetail={projectDetail} setProjectDetail={setProjectDetail} onSubmit={updateProjects} modalRef={modalRef}/>
-                    </div>
+
+                            <div className="col-md-4 m-5 p-5">
+                                <button type="button" class="btn btn-light border" data-toggle="modal" data-target="#exampleModal" className="plus-button">+</button>
+                                <ProjectsPageModal projectDetail={projectDetail} setProjectDetail={setProjectDetail} onSubmit={updateProjects} modalRef={modalRef} />
+                            </div>
 
                 </div>
             </div >

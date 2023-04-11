@@ -28,7 +28,7 @@ const TasksDashboardMarket = () => {
     return (
         <>
             <Navbar />
-            <div className="wrapper">
+            <div className="wrapper top-gap">
                 <div className="container">
                     <h1>Marketing Services & Product - Tasks List</h1>
 

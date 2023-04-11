@@ -3,16 +3,17 @@ import TaskDetail from "../components/TaskDetail/TaskDetail";
 import Comment from "../components/Comment";
 import TaskDetailModal from "../components/TaskDetail/TaskDetailModal";
 import ChatInput from "../components/ChatInput/ChatInput";
+import { Link } from "react-router-dom";
 
 const TaskPageGame1 = () => {
 
     return (
         <>
             <Navbar />
-            <div className="wrapper container">
+            <div className="wrapper container top-gap">
                 <div className="row ml-3">
                     <div className="col-md-12">
-                        <p className="h4">Game Design</p>
+                        <Link to="/taskdashboard2"><p className="h4">Game Design</p></Link>
                         <p class="h1 mt-4 mb-4">Narrative Storyboarding</p>
                         <p class="h5">Description</p>
                         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium sapiente dolores quos ad fugiat, obcaecati quae? Obcaecati sequi quis corrupti ipsa voluptas voluptatibus. Velit omnis suscipit, pariatur quos possimus magni!</p>

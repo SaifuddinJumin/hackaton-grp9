@@ -12,6 +12,10 @@
         padding-top: 66px;
         margin-bottom: 8%;
     }
+
+    .top-gap-welcome {
+        margin-top: 25%;
+    }
 }
 
 .banner {
@@ -26,4 +30,9 @@
 
 .btn-plus {
     font-size: x-large;
+}
+
+.plus-button {
+    margin-left: 48%;
+    margin-right: 48%;
 }

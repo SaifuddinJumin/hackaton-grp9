@@ -26,7 +26,7 @@ const TasksDashboardGame = () => {
     return (
         <>
             <Navbar />
-            <div className="wrapper">
+            <div className="wrapper top-gap">
                 <div className="container">
                     <h1>Game Design - Tasks List</h1>
 

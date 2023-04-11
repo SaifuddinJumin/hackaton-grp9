@@ -27,7 +27,7 @@ const TasksDashboardWeb = () => {
     return (
         <>
             <Navbar />
-            <div className="wrapper" >
+            <div className="wrapper top-gap">
                 <div className="container">
                     <h1>Web Development - Tasks List</h1>
 

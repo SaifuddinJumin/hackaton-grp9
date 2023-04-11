@@ -14,6 +14,7 @@ import TaskPageGame3 from "./pages/TaskPageGame3";
 import TaskPageMarket1 from "./pages/TaskPageMarket1";
 import TaskPageMarket2 from "./pages/TaskPageMarket2";
 import UserProfile from "./pages/UserProfilePage";
+import "./App.css";
 
 function App() {
   return (
