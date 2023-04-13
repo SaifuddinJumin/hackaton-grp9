@@ -1,3 +1,16 @@
+# What is this
+
+This is a demo of a 'task manager'.
+It's work done by Group 9 of coding.bn hackaton 2023 which consists of:
+
+https://github.com/HajiMuhammadHafidzuddinHajiUmar
+https://github.com/SaifuddinJumin
+https://github.com/MuizzKasim
+https://github.com/n3r052
+https://github.com/zabidman
+
+<!--  -->
+
 Completing the demo before attempting to connect front-end to back-end
 
 Remember !
@@ -7,6 +20,9 @@ Remember !
 2. For directory server ie. express & mysql2
 >npm install
 
+
+
+<!-- ------------------------------------------------ -->
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
