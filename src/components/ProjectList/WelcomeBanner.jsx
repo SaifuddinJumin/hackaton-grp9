@@ -22,12 +22,12 @@ const WelcomeBanner = () => {
                     {/* <div class="carousel-item active">
                         <img src={bannerRamadan14} class="d-block w-100 banner" alt="14 days of Ramadan left" />
                     </div> */}
-                    <div class="carousel-item active">
-                        <img src={bannerRamadan10} class="d-block w-100 banner" alt="14 days of Ramadan left" />
-                    </div>
                     {/* <div class="carousel-item active">
-                        <img src={bannerRamadan9} class="d-block w-100 banner" alt="14 days of Ramadan left" />
+                        <img src={bannerRamadan10} class="d-block w-100 banner" alt="14 days of Ramadan left" />
                     </div> */}
+                    <div class="carousel-item active">
+                        <img src={bannerRamadan9} class="d-block w-100 banner" alt="14 days of Ramadan left" />
+                    </div>
                     
                     <div class="carousel-item">
                         <img src={bannerNuzul} class="d-block w-100 banner" alt="Nuzul in-coming" />

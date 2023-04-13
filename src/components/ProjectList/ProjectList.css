@@ -4,24 +4,31 @@
         margin-left: 20%;
         width: 80%;
         margin-bottom: 6%;
+        padding-top: 66px;
+    }
+
+    .banner {
+        aspect-ratio: 5/2;
+        object-fit: contain;
     }
 }
 
 @media screen and (max-width: 992px) {
     .wrapper {
-        padding-top: 66px;
+        padding-top: 20px;
         margin-bottom: 8%;
     }
 
     .top-gap-welcome {
         margin-top: 25%;
     }
+
+    .banner {
+        aspect-ratio: 2/2;
+        object-fit: contain;
+    }
 }
 
-.banner {
-    aspect-ratio: 3/2;
-    object-fit: contain;
-}
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {

@@ -15,6 +15,7 @@ import TaskPageMarket1 from "./pages/TaskPageMarket1";
 import TaskPageMarket2 from "./pages/TaskPageMarket2";
 import UserProfile from "./pages/UserProfilePage";
 import "./App.css";
+import TaskPageGame4 from "./pages/TaskPageGame4";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
           <Route path="/taskdashboard/taskpage/game1" element={<TaskPageGame1/>}/>
           <Route path="/taskdashboard/taskpage/game2" element={<TaskPageGame2/>}/>
           <Route path="/taskdashboard/taskpage/game3" element={<TaskPageGame3/>}/>
+          <Route path="/taskdashboard/taskpage/game4" element={<TaskPageGame4/>}/>
 
           <Route path="/taskdashboard/taskpage/market1" element={<TaskPageMarket1/>}/>
           <Route path="/taskdashboard/taskpage/market2" element={<TaskPageMarket2/>}/>

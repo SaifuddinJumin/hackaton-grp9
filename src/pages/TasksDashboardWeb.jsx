@@ -17,10 +17,10 @@ const TasksDashboardWeb = () => {
         taskPath: ''
     });
 
-    const updateTasks = () =>{
+    const updateTasks = () => {
         taskDetails.push(taskDetail)
-        
-        const newTaskDetail = {...taskDetail}
+
+        const newTaskDetail = { ...taskDetail }
         setTaskDetail(newTaskDetail)
     }
 
@@ -29,6 +29,14 @@ const TasksDashboardWeb = () => {
             <Navbar />
             <div className="wrapper top-gap">
                 <div className="container">
+
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><Link to={"/"}>Dashboard</Link></li>
+                            <li class="breadcrumb-item active" aria-current="page">Web Development</li>
+                        </ol>
+                    </nav>
+
                     <h1>Web Development - Tasks List</h1>
 
                     <div className="row">
@@ -71,13 +79,13 @@ const TasksDashboardWeb = () => {
 
                         {
                             taskDetails.map((data, index) =>
-                                <TaskDetail data={data} key={index}/>
+                                <TaskDetail data={data} key={index} />
                             )
                         }
 
                         <div className="col-md-2 m-3">
                             <button type="button" class="btn btn-light border" data-toggle="modal" data-target="#exampleModal">Add</button>
-                            <TaskDashboardModal taskDetail={taskDetail} setTaskDetail={setTaskDetail} onSubmit={updateTasks} modalRef={modalRef}/>
+                            <TaskDashboardModal taskDetail={taskDetail} setTaskDetail={setTaskDetail} onSubmit={updateTasks} modalRef={modalRef} />
                         </div>
 
 

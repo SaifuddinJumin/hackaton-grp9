@@ -21,8 +21,6 @@ async function getUserProfilebyUid(uid) {
     
 }
 
-
-
 async function getRoleidbyUid(uid) {
     return new Promise((resolve,reject)=>{
         const sql = `SELECT roleid FROM user_profile WHERE uid=${uid}`;

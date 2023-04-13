@@ -23,7 +23,7 @@ const ProjectList = () => {
     }
 
     return (
-        <div className="wrapper">
+        <div className="wrapper pl-3 pr-3">
             <div className="container">
 
                 <h1 className="mt-3">Project Teams</h1>
@@ -67,7 +67,7 @@ const ProjectList = () => {
 
 
                             <div className="col-md-4 m-5 p-5">
-                                <button type="button" class="btn btn-light border" data-toggle="modal" data-target="#exampleModal" className="plus-button">+</button>
+                                <button type="button" class="btn btn-light border" data-toggle="modal" data-target="#exampleModal" className="plus-button border-0" style={{fontSize:40}}>+</button>
                                 <ProjectsPageModal projectDetail={projectDetail} setProjectDetail={setProjectDetail} onSubmit={updateProjects} modalRef={modalRef} />
                             </div>
 

@@ -17,10 +17,10 @@ const TasksDashboardGame = () => {
         taskPath: ''
     });
 
-    const updateTasks = () =>{
+    const updateTasks = () => {
         taskDetails.push(taskDetail)
-        
-        const newTaskDetail = {...taskDetail}
+
+        const newTaskDetail = { ...taskDetail }
         setTaskDetail(newTaskDetail)
     }
     return (
@@ -28,6 +28,14 @@ const TasksDashboardGame = () => {
             <Navbar />
             <div className="wrapper top-gap">
                 <div className="container">
+
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><Link to={"/"}>Dashboard</Link></li>
+                            <li class="breadcrumb-item active" aria-current="page">Game Design</li>
+                        </ol>
+                    </nav>
+
                     <h1>Game Design - Tasks List</h1>
 
                     <div className="row">
@@ -59,15 +67,25 @@ const TasksDashboardGame = () => {
                             </div>
                         </div>
 
+                        <div className="col-md-12">
+                            <div className="card bg-light mt-2">
+                                <div className="card-body">
+                                    <h5 className="card-title">Clean up gamers !</h5>
+                                    <p className="card-text">Clean up</p>
+                                    <Link to="/taskdashboard/taskpage/game4" className="btn btn-primary">see more</Link>
+                                </div>
+                            </div>
+                        </div>
+
                         {
                             taskDetails.map((data, index) =>
-                                <TaskDetail data={data} key={index}/>
+                                <TaskDetail data={data} key={index} />
                             )
                         }
 
                         <div className="col-md-2 m-3">
                             <button type="button" class="btn btn-light border" data-toggle="modal" data-target="#exampleModal">Add</button>
-                            <TaskDashboardModal taskDetail={taskDetail} setTaskDetail={setTaskDetail} onSubmit={updateTasks} modalRef={modalRef}/>
+                            <TaskDashboardModal taskDetail={taskDetail} setTaskDetail={setTaskDetail} onSubmit={updateTasks} modalRef={modalRef} />
                         </div>
 
                     </div>

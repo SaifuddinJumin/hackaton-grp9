@@ -10,10 +10,12 @@ const Profile = () => {
             <div className="container">
                 <div class='d-flex p-2 '>
                     <img src={image} class="img-thumbnail" alt="..." />
-                    <p class="display-4 ml-3 align-self-center">Iqbal Haziq</p>
-                    <p class='badge badge-success align-self-center p-2 ml-3'>Role: <span>IT Admin</span></p>
-                </div>
+                    <div>
+                        <p class="display-4 ml-3 align-self-center">Iqbal Haziq</p>
+                        <p class='badge badge-success align-self-center p-2 ml-3'>Role: <span>IT Admin</span></p>
+                    </div>
 
+                </div>
 
             </div>
 
@@ -27,7 +29,7 @@ const Profile = () => {
                         <div id='userInfo' class='card border rounded bg-light p-2 m-1'>
                             <div className="card-body">
                                 <p class='h5 card-title'>Email Address</p>
-                                <p class='pl-3 card-text'> iqbal@email.com</p>
+                                <p class='pl-3 card-text'> iqbal@hotmail.com</p>
                             </div>
                         </div>
                     </div>

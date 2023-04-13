@@ -1,8 +1,9 @@
 Completing the demo before attempting to connect front-end to back-end
 
 Remember !
-1. For directory front-end ie. axios
+1. For directory front-end ie. axios (Used cdn for bootstrap@4.6 in index.html)
 >npm install
+
 2. For directory server ie. express & mysql2
 >npm install
 
